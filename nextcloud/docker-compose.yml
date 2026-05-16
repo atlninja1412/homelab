@@ -1,0 +1,30 @@
+services:
+  nextcloud:
+    image: nextcloud:latest
+    container_name: nextcloud
+
+    restart: unless-stopped
+
+    ports:
+      - "8080:80"
+
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_DB: nextcloud
+      POSTGRES_USER: nextcloud
+      POSTGRES_PASSWORD: Catvang1412!
+
+      REDIS_HOST: redis
+
+    volumes:
+      - nextcloud_data:/var/www/html
+
+    networks:
+      - homelab
+
+volumes:
+  nextcloud_data:
+
+networks:
+  homelab:
+    external: true
