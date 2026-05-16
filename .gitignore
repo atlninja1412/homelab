@@ -1,0 +1,24 @@
+# =========================
+# RUNTIME DATA (NEVER COMMIT)
+# =========================
+
+pihole/etc-pihole/
+pihole/etc-dnsmasq.d/
+uptime-kuma/data/
+postgres/
+redis/
+nextcloud/
+portainer/
+
+# =========================
+# SECRETS
+# =========================
+.env
+*.key
+*.pem
+*.db
+
+# =========================
+# OS / JUNK
+# =========================
+.DS_Store

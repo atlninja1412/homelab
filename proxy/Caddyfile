@@ -1,0 +1,11 @@
+nextcloud.local {
+    reverse_proxy nextcloud:80
+}
+
+pihole.local {
+    reverse_proxy pihole:80
+}
+
+kuma.local {
+    reverse_proxy uptime-kuma:3001
+}
